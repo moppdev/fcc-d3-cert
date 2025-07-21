@@ -53,8 +53,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     // use formatTime and tickFormat to get the right labels on y
     svg.append("g").attr("id", "y-axis").attr("transform", `translate(${padding}, 0)`).call(d3.axisLeft(yScale).tickFormat(formatTime));
 
-    // generate the legend
-    svg.append("g").attr("id", 'legend').attr("x", padding + 5).attr("y", padding + 15).append("rect").style("fill", "orange").append("text").text("No doping allegations").attr("width", 100).attr("height", 20);
+ // generate the legend
+const legend = svg.append("g")
+    .attr("id", 'legend')
+    .attr("transform", `translate(${width - padding - 200}, ${height / 2 - 40})`);
+
+// First legend item
+const legendItemOne = legend.append("g")
+    .attr("class", "legend-item")
+    .attr("transform", "translate(0, 0)");
+
+legendItemOne.append("rect")
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "rgb(36, 92, 175)");
+
+legendItemOne.append("text")
+    .text("No doping allegations")
+    .attr("x", 30)  // Move text right of the box
+    .attr("y", 15); // Align vertically with the box
+
+// Second legend item
+const legendItemTwo = legend.append("g")
+    .attr("class", "legend-item")
+    .attr("transform", "translate(0, 30)");  // Position below the first item
+
+legendItemTwo.append("rect")
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", "orange");
+
+legendItemTwo.append("text")
+    .text("Doping")
+    .attr("x", 30)
+    .attr("y", 15);
+
 
     // get the tooltip
     const tooltip = d3.select("#tooltip");
