@@ -6,6 +6,10 @@
     position: relative;
 }
 
+.legend-item {
+  font-size: 0.6em;
+}
+
 .svg {
     /* offset x, offset y, blur, spread-radius */
     box-shadow: -5px 5px 5px 0px black;
