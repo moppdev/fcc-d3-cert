@@ -1,0 +1,28 @@
+.body {
+    background-color: darkcyan;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex: auto;
+}
+
+.svg {
+    background-color: white;
+    box-shadow: 2em 2em 2em black;
+}
+
+.bar {
+    fill: rgb(40, 40, 165);
+}
+
+.bar:hover {
+    fill: orange;
+}
+
+.tooltip {
+    position: absolute; 
+    opacity: 0; 
+    background: lightsteelblue; 
+    padding: 1em;
+}

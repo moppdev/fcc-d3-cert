@@ -1,0 +1,37 @@
+.body {
+    background-color: rgb(248, 221, 187);
+    font-family: "Special Gothic Expanded One", sans-serif;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.svg {
+    /* offset x, offset y, blur, spread-radius */
+    box-shadow: -5px 5px 5px 0px black;
+    background-color: whitesmoke;
+}
+
+.dot {
+    fill:rgb(36, 92, 175);
+}
+
+.dot-nodope {
+    fill: orange;
+}
+
+.dot-nodope:hover {
+    fill: rgb(241, 190, 95);
+}
+
+.dot:hover {
+    fill:rgb(22, 59, 114);
+}
+
+.tooltip {
+    opacity: 0;
+    background-color: rgb(177, 207, 207);
+    position: absolute;
+    white-space: pre-line;
+    font-size: 0.8em;
+}
