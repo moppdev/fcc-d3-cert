@@ -1,0 +1,23 @@
+.body {
+    background-color: rgb(57, 114, 235);
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.svg {
+    box-shadow: 2px 2px 1em black;
+    background-color: whitesmoke;
+}
+
+.cell:hover {
+    fill: darkorchid;
+}
+
+.tooltip {
+    opacity: 0;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 0.6em;
+    text-align: center;
+    white-space: pre-line;
+    position: absolute;
+}
